@@ -7,6 +7,8 @@ Elements-global will allow you to define specific elements as being global. Glob
 
 The elements that should be available globaly should implement the IElementsGlobal interface. When creating this elements via a ModelAdmin they will automatically get the flag Global set to true.
 
+__You need to specify at least one Element that implements the IElementsGlobal interface.__
+
 ```
 <?php
 class HeroElement extends ElementBase implements IElementsGlobal

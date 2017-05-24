@@ -17,6 +17,19 @@ class VirtualElement extends ElementBase
 		$fields = parent::getCMSFields();
 
 		$availableClasses = ElementsExtension::map_classnames(ClassInfo::implementorsOf("IElementsGlobal"));
+		$allowedClasses = Config::inst()->get($this->getHolder()->ClassName,'virtual_elements');
+		$relationName = Controller::curr()->request->param('FieldName');
+
+		if(isset($allowedClasses[$relationName])){
+			$filterClasses = $allowedClasses[$relationName];
+			$availableClasses = array_filter(
+				$availableClasses,
+				function ($key) use ($filterClasses) {
+					return in_array($key, $filterClasses);
+				},
+				ARRAY_FILTER_USE_KEY
+			);
+		}
 
 		$availableElements = function($val) {
 			$origMode = Versioned::get_reading_mode();

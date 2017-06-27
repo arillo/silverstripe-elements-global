@@ -1,4 +1,4 @@
-# arillo\elements-global
+# SilverStripe Elements global
 
 [![Latest Stable Version](https://poser.pugx.org/arillo/silverstripe-elements-global/v/stable?format=flat)](https://packagist.org/packages/arillo/silverstripe-elements-global)
 [![Total Downloads](https://poser.pugx.org/arillo/silverstripe-elements-global/downloads?format=flat)](https://packagist.org/packages/arillo/silverstripe-elements-global)

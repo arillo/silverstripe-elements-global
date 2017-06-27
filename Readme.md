@@ -9,7 +9,7 @@ The elements that should be available globaly should implement the IElementsGlob
 
 __You need to specify at least one Element that implements the IElementsGlobal interface.__
 
-```
+```php
 <?php
 class HeroElement extends ElementBase implements IElementsGlobal
 {
@@ -19,7 +19,7 @@ class HeroElement extends ElementBase implements IElementsGlobal
 
 You can restrict the allowed elements to be referenced by a virtual element on a per pagetype basis on your config.yml via the virtual_elements attribute.
 
-```
+```yml
 HomePage:
   element_relations:
     Elements:

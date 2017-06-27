@@ -1,8 +1,0 @@
----
-Name: elements-global
-After:
-  - 'elements/*'
----
-ElementBase:
-  extensions:
-    - arillo\elements\ElementGlobalExtension

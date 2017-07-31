@@ -3,12 +3,19 @@
     "page": {
       "layout": "index",
       "theme": "blue",
-      "title": "SilverStripe Elements global",
-      "intro": "Global elements for SilverStripe Elements"
+      "title": "SilverStripe Elements Global",
+      "intro": "Global elements for <a href=\"https://arillo.github.io/silverstripe-elements/\">SilverStripe Elements</a>"
     }
   },
+
+  "page": {
+    "metaDescription": "Global customizable layout elements for the SilverStripe CMS",
+    "metaImage": "https://arillo.github.io/silverstripe-elements-global/share-img.png"
+  },
+
   "menu": false,
   "projectBase": "/silverstripe-elements-global",
+  "projectUrl": "https://arillo.github.io/silverstripe-elements-global/",
   "githubLink": "https://github.com/arillo/silverstripe-elements-global",
   "licenseLink": "https://github.com/arillo/silverstripe-elements-global/blob/master/License.md",
   "licenseType": "MIT"

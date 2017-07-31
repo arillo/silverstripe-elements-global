@@ -1,6 +1,7 @@
 # SilverStripe Elements global
 
 [![Latest Stable Version](https://poser.pugx.org/arillo/silverstripe-elements-global/v/stable?format=flat)](https://packagist.org/packages/arillo/silverstripe-elements-global)
+&nbsp;
 [![Total Downloads](https://poser.pugx.org/arillo/silverstripe-elements-global/downloads?format=flat)](https://packagist.org/packages/arillo/silverstripe-elements-global)
 
 Elements-global will allow you to define specific elements as being global. Global elements can be added to pages by creating a VirtualElement that will work as a link/placeholder to the global element.

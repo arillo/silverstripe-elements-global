@@ -9,6 +9,7 @@
   },
 
   "page": {
+    "silverstripe": true,
     "metaDescription": "Global customizable layout elements for the SilverStripe CMS",
     "metaImage": "https://arillo.github.io/silverstripe-elements-global/share-img.png"
   },

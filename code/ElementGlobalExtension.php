@@ -1,7 +1,7 @@
 <?php
 namespace Arillo\ElementsGlobal;
 
-use \DataExtension;
+use SilverStripe\ORM\DataExtension;
 
 class ElementGlobalExtension extends DataExtension
 {

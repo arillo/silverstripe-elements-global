@@ -3,15 +3,15 @@
 namespace Arillo\ElementsGlobal;
 
 
+use Arillo\Elements\ElementBase;
+use SilverStripe\Core\ClassInfo;
+use SilverStripe\Control\Controller;
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Versioned\Versioned;
 use Arillo\Elements\ElementsExtension;
-use ElementBase;
-use ClassInfo;
-use Config;
-use Controller;
-use Versioned;
-use DropdownField;
-use DependentDropdownField;
-
+use Arillo\ElementsGlobal\IElementsGlobal;
+use Sheadawson\DependentDropdown\Forms\DependentDropdownField;
 
 class VirtualElement extends ElementBase
 {
@@ -27,7 +27,7 @@ class VirtualElement extends ElementBase
     public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$availableClasses = ElementsExtension::map_classnames(ClassInfo::implementorsOf("IElementsGlobal"));
+		$availableClasses = ElementsExtension::map_classnames(ClassInfo::implementorsOf(IElementsGlobal::class));
 		$allowedClasses = Config::inst()->get($this->getHolder()->ClassName,'virtual_elements');
 		$relationName = Controller::curr()->request->param('FieldName');
 

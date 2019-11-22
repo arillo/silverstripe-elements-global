@@ -1,0 +1,4 @@
+mappings:
+  VirtualElement: Arillo\ElementsGlobal\VirtualElement
+  IElementsGlobal: Arillo\ElementsGlobal\IElementsGlobal
+  ElementsGlobalModelAdmin: Arillo\ElementsGlobal\ElementsGlobalModelAdmin

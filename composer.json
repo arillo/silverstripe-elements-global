@@ -27,6 +27,11 @@
         "sheadawson/silverstripe-dependentdropdownfield": "^2.0.0",
         "silverstripe/vendor-plugin": "^1"
     },
+    "autoload": {
+        "psr-4": {
+            "Arillo\\Elements\\": "code/"
+        }
+    },
     "support": {
         "issues": "https://github.com/arillo/silverstripe-elements-global/issues"
     }

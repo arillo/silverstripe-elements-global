@@ -1,5 +1,5 @@
 <?php
-namespace arillo\elements;
+namespace Arillo\ElementsGlobal;
 
 use \DataExtension;
 

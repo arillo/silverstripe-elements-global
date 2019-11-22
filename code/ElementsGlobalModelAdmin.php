@@ -1,5 +1,12 @@
 <?php
 
+namespace Arillo\ElementsGlobal;
+
+use ModelAdmin;
+use HiddenField;
+use ClassInfo;
+
+
 class ElementsGlobalModelAdmin extends ModelAdmin
 {
 

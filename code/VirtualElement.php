@@ -1,6 +1,17 @@
 <?php
 
-use arillo\elements\ElementsExtension;
+namespace Arillo\ElementsGlobal;
+
+
+use Arillo\Elements\ElementsExtension;
+use ElementBase;
+use ClassInfo;
+use Config;
+use Controller;
+use Versioned;
+use DropdownField;
+use DependentDropdownField;
+
 
 class VirtualElement extends ElementBase
 {

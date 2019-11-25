@@ -7,6 +7,7 @@ use SilverStripe\Forms\HiddenField;
 
 class ElementsGlobalModelAdminExtension extends Extension
 {
+    // TODO: check why Global = 1 is not being set on creation of dataobject
     public function updateEditForm(&$form) 
     {
         $form->Fields()->removeByName('PageID');

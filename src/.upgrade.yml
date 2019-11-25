@@ -1,0 +1,10 @@
+mappings:
+  VirtualElement: Arillo\ElementsGlobal\VirtualElement
+  IElementsGlobal: Arillo\ElementsGlobal\IElementsGlobal
+  ElementsGlobalModelAdmin: Arillo\ElementsGlobal\ElementsGlobalModelAdmin
+
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    VirtualElement: Arillo\ElementsGlobal\VirtualElement
+    IElementsGlobal: Arillo\ElementsGlobal\IElementsGlobal
+    ElementsGlobalModelAdmin: Arillo\ElementsGlobal\ElementsGlobalModelAdmin

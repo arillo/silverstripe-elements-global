@@ -2,7 +2,6 @@
 
 namespace Arillo\ElementsGlobal;
 
-
 use Arillo\Elements\ElementBase;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Control\Controller;
@@ -16,11 +15,16 @@ use Sheadawson\DependentDropdown\Forms\DependentDropdownField;
 class VirtualElement extends ElementBase
 {
 
+	private static $singular_name = 'Virtual element';
+	private static $extensions = [ 
+		Versioned::class . '.versioned' 
+	];
+
 	private static $db = array(
 		'ReferenceClass' => 'Varchar'
 	);
 	private static $has_one = array(
-        'ReferenceElement' => 'ElementBase'
+        'ReferenceElement' => ElementBase::class
     );
 
 
@@ -43,15 +47,11 @@ class VirtualElement extends ElementBase
 		}
 
 		$availableElements = function($val) {
-			$origMode = Versioned::get_reading_mode();
-			Versioned::reading_stage('Live');
-			$elements = $val::get()
+			return Versioned::get_by_stage($val, Versioned::LIVE)
 				->filter(array('Global' => 1))
 				->map('ID','Title')
 			;
-			Versioned::set_reading_mode($origMode);
-			return $elements;
-		}; 
+		};
 
 		$classesDropdown = DropdownField::create('ReferenceClass', 'Type', $availableClasses);
 		$elementsDropdown = DependentDropdownField::create('ReferenceElementID', 'Element', $availableElements)->setDepends($classesDropdown);
@@ -64,7 +64,10 @@ class VirtualElement extends ElementBase
 	}
 
 	public function getType(){
-		return $this->ClassName . ' :: ' . $this->ReferenceClass;
+		if($ref = $this->ReferenceClass){
+			return $this->i18n_singular_name() . ' :: ' . $ref;
+		}
+		return $this->i18n_singular_name();
 	}
 
 	public function previewRender(){

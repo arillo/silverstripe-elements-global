@@ -17,34 +17,9 @@ class ElementsGlobalModelAdmin extends ModelAdmin
 
 	private static $url_segment = 'elements-global';
 
-	private static $menu_icon = '_resources/vendor/arillo/silverstripe-elements-global/client/images/ModelAdmin.png';
+	private static $menu_icon = 'arillo/silverstripe-elements-global:client/images/ModelAdmin.png';
 
 	private static $menu_priority = 1.5;
-
-	// public function updateEditForm(&$form) 
-    // {
-	// 	$form->Fields()->removeByName('PageID');
-	// 	$form->Fields()->addFieldToTab('Root.Main', HiddenField::create('Global', 'Global', 1));
-    // }
-	// public function getEditForm($id = null, $fields = null) {
-	// 	$form = parent::getEditForm($id, $fields);
-	// 	$modelclass = $this->sanitiseClassName($this->modelClass);
-	// 	$config = $form->Fields()->fieldByName($modelclass)->getConfig();
-	// 	\SilverStripe\Dev\Debug::dump($this->modelClass);
-		
-	// 	// $config->getComponentByType(GridFieldPaginator::class)->setItemsPerPage(50);
-
-	// 	// $detailForm = $config->getComponentByType(GridFieldDetailForm::class);
-		
-	// 	// $detailForm->setItemEditFormCallback(function($form) {
-	// 	// 	// $record = $form->getRecord();
-	// 	// 	$form->Fields()->removeByName('PageID');
-	// 	// 	$form->Fields()->addFieldToTab('Root.Main', HiddenField::create('Global', 'Global', 1));
-	// 	// 	// $form->Fields()->addFieldToTab('Root.Reference', TextField::create('Testsadf', 'Test'));
-	// 	// });
-
-	// 	return $form;
-	// }
 
 	public function getManagedModels() {
 

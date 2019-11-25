@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Arillo\\Elements\\": "code/"
+            "Arillo\\Elements\\": "src/"
         }
     },
     "support": {

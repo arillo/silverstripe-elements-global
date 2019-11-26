@@ -14,7 +14,7 @@ use Sheadawson\DependentDropdown\Forms\DependentDropdownField;
 
 class VirtualElement extends ElementBase
 {
-
+	private static $table_name = 'Arillo_ElementBase_VirtualElement';
 	private static $singular_name = 'Virtual element';
 	private static $extensions = [ 
 		Versioned::class . '.versioned' 

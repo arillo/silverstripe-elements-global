@@ -17,8 +17,9 @@ class VirtualElement extends ElementBase
 	private static $table_name = 'Arillo_ElementGlobal_VirtualElement';
 	private static $singular_name = 'Virtual element';
 	private static $extensions = [ 
-		Versioned::class . '.versioned' 
+		Versioned::class
 	];
+	// . '.versioned' 
 
 	private static $db = array(
 		'ReferenceClass' => 'Varchar'

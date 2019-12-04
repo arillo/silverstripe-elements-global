@@ -49,7 +49,11 @@ class VirtualElement extends ElementBase
 
 		$availableElements = function($val) {
 			return Versioned::get_by_stage($val, Versioned::LIVE)
-				->filter(array('Global' => 1))
+				->filter([
+					'PageID' => 0,
+					'ElementID' => 0
+					// 'Global' => 1,
+				])
 				->map('ID','Title')
 			;
 		};

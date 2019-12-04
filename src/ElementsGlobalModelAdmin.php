@@ -47,7 +47,11 @@ class ElementsGlobalModelAdmin extends ModelAdmin
 
 	public function getList() {
 		$list = parent::getList()
-			->filter(array('Global' => 1))
+			->filter([
+				'PageID' => 0,
+				'ElementID' => 0
+				// 'Global' => 1,
+			])
 		;
 		return $list;
 	}

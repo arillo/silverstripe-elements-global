@@ -1,39 +1,41 @@
 {
-    "name": "arillo/silverstripe-elements-global",
-    "description": "Global Elements",
-    "type": "silverstripe-vendormodule",
-    "homepage": "https://github.com/arillo/silverstripe-elements-global",
-    "keywords": [
-        "silverstripe",
-        "elements",
-        "global"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Daniel Murcia",
-            "email": "dm@arillo.net"
-        },
-        {
-            "name": "Sebastian Fischer",
-            "email": "sf@arillo.net"
-        }
-    ],
-    "extra": {
-        "expose": ["client"],
-        "installer-name": "elements-global"
+  "name": "arillo/silverstripe-elements-global",
+  "description": "Global Elements",
+  "type": "silverstripe-vendormodule",
+  "homepage": "https://github.com/arillo/silverstripe-elements-global",
+  "keywords": [
+    "silverstripe",
+    "elements",
+    "global"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Murcia",
+      "email": "dm@arillo.net"
     },
-    "require": {
-        "arillo/silverstripe-elements": "dev-master",
-        "sheadawson/silverstripe-dependentdropdownfield": "^2.0.0",
-        "silverstripe/vendor-plugin": "^1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Arillo\\Elements\\": "src/"
-        }
-    },
-    "support": {
-        "issues": "https://github.com/arillo/silverstripe-elements-global/issues"
+    {
+      "name": "Sebastian Fischer",
+      "email": "sf@arillo.net"
     }
+  ],
+  "extra": {
+    "expose": [
+      "client"
+    ],
+    "installer-name": "elements-global"
+  },
+  "require": {
+    "arillo/silverstripe-elements": "^2.2",
+    "sheadawson/silverstripe-dependentdropdownfield": "^2.0.0",
+    "silverstripe/vendor-plugin": "^1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Arillo\\Elements\\": "src/"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/arillo/silverstripe-elements-global/issues"
+  }
 }

@@ -11,7 +11,6 @@ The elements that should be available globaly should implement the IElementsGlob
 __You need to specify at least one Element that implements the IElementsGlobal interface.__
 
 ```php
-<?php
 class HeroElement extends ElementBase implements IElementsGlobal
 {
 ...

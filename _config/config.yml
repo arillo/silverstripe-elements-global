@@ -3,6 +3,10 @@ Name: elements-global
 After:
   - 'elements/*'
 ---
-ElementBase:
+Arillo\Elements\ElementBase:
   extensions:
-    - arillo\elements\ElementGlobalExtension
+    - Arillo\ElementsGlobal\ElementGlobalExtension
+
+Arillo\ElementsGlobal\ElementsGlobalModelAdmin:
+  extensions:
+    - Arillo\ElementsGlobal\ElementsGlobalModelAdminExtension

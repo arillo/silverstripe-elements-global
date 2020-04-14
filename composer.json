@@ -26,7 +26,7 @@
     "installer-name": "elements-global"
   },
   "require": {
-    "arillo/silverstripe-elements": "^2",
+    "arillo/silverstripe-elements": "dev-dev",
     "sheadawson/silverstripe-dependentdropdownfield": "dev-master",
     "silverstripe/vendor-plugin": "^1"
   },

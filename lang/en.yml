@@ -1,0 +1,6 @@
+en:
+  Arillo\ElementsGlobal\VirtualElement:
+    SINGULARNAME: 'Virtual element'
+    PLURALNAME: 'Virtual elementes'
+    Type: Type
+    ReferenceElementID: Element

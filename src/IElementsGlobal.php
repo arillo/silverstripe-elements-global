@@ -2,7 +2,6 @@
 
 namespace Arillo\ElementsGlobal;
 
-
-
-interface IElementsGlobal {
+interface IElementsGlobal
+{
 }

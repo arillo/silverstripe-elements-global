@@ -20,13 +20,10 @@
     }
   ],
   "extra": {
-    "expose": [
-      "client"
-    ],
     "installer-name": "elements-global"
   },
   "require": {
-    "arillo/silverstripe-elements": "dev-dev",
+    "arillo/silverstripe-elements": "2.3.x-dev",
     "sheadawson/silverstripe-dependentdropdownfield": "dev-master",
     "silverstripe/vendor-plugin": "^1"
   },

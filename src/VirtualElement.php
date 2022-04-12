@@ -107,9 +107,11 @@ class VirtualElement extends ElementBase
         $IsLast = null,
         $IsEvenOdd = null
     ) {
-        return $this->ReferenceElement()
-            ->setVirtualHolderElement($this)
-            ->Render($IsPos, $IsFirst, $IsLast, $IsEvenOdd);
+        $el = $this->ReferenceElement();
+        if ($el->hasMethod('setVirtualHolderElement')) {
+            $el->setVirtualHolderElement($this);
+        }
+        return $el->Render($IsPos, $IsFirst, $IsLast, $IsEvenOdd);
     }
 
     public function getCMSSummary()

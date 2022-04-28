@@ -70,7 +70,7 @@ class VirtualElement extends ElementBase
 
 	public function getType(){
 		if($ref = $this->ReferenceClass){
-			return $this->i18n_singular_name() . ' :: ' . $ref;
+			return $this->i18n_singular_name() . ' :: ' . singleton($ref)->i18n_singular_name();
 		}
 		return $this->i18n_singular_name();
 	}

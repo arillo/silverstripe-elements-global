@@ -119,7 +119,7 @@ class VirtualElement extends ElementBase
         if (($ref = $this->ReferenceElement()) && $ref->exists()) {
             return $ref->getCMSSummary();
         }
-        return $this->getCMSSummary();
+        return parent::getCMSSummary();
     }
 
     public function getCacheKey()

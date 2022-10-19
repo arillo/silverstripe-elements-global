@@ -48,7 +48,7 @@ class VirtualElement extends ElementBase
 		}
 
 		$availableElements = function($val) {
-			return Versioned::get_by_stage($val, Versioned::LIVE)
+			$items = Versioned::get_by_stage($val, Versioned::LIVE)
 				->filter([
 					'PageID' => 0,
 					'ElementID' => 0
@@ -56,6 +56,11 @@ class VirtualElement extends ElementBase
 				])
 				->map('ID','Title')
 			;
+			$result = [];
+			foreach($items as $id => $title){
+				$result[$id] = $id . ": " . $title;
+			}
+			return $result;
 		};
 
 		$classesDropdown = DropdownField::create('ReferenceClass', 'Type', $availableClasses);

@@ -38,50 +38,52 @@ class VirtualElement extends ElementBase
 
     public function getCMSFields()
     {
-        $fields = parent::getCMSFields();
-        $labels = $this->fieldLabels();
-        $availableClasses = ElementsExtension::map_classnames(
-            ClassInfo::implementorsOf(IElementsGlobal::class)
-        );
-        $allowedClasses = Config::inst()->get(
-            $this->getHolder()->ClassName,
-            'virtual_elements'
-        );
-        $relationName = Controller::curr()->request->param('FieldName');
-
-        if (isset($allowedClasses[$relationName])) {
-            $filterClasses = $allowedClasses[$relationName];
-            $availableClasses = array_filter(
-                $availableClasses,
-                function ($key) use ($filterClasses) {
-                    return in_array($key, $filterClasses);
-                },
-                ARRAY_FILTER_USE_KEY
+        $self = $this;
+        $this->beforeUpdateCMSFields(function ($fields) use ($self) {
+            $availableClasses = ElementsExtension::map_classnames(
+                ClassInfo::implementorsOf(IElementsGlobal::class)
             );
-        }
+            $allowedClasses = Config::inst()->get(
+                $self->getHolder()->ClassName,
+                'virtual_elements'
+            );
+            $relationName = Controller::curr()->request->param('FieldName');
 
-        $availableElements = function ($val) {
-            return $val
-                ::get()
-                ->filter(self::global_elements_filter())
-                ->map('ID', 'Title');
-        };
+            if (isset($allowedClasses[$relationName])) {
+                $filterClasses = $allowedClasses[$relationName];
+                $availableClasses = array_filter(
+                    $availableClasses,
+                    function ($key) use ($filterClasses) {
+                        return in_array($key, $filterClasses);
+                    },
+                    ARRAY_FILTER_USE_KEY
+                );
+            }
 
-        $classesDropdown = DropdownField::create(
-            'ReferenceClass',
-            $labels['Type'],
-            $availableClasses
-        );
+            $availableElements = function ($val) {
+                return $val
+                    ::get()
+                    ->filter(self::global_elements_filter())
+                    ->map('ID', 'Title');
+            };
 
-        $elementsDropdown = DependentDropdownField::create(
-            'ReferenceElementID',
-            $labels['ReferenceElementID'],
-            $availableElements
-        )->setDepends($classesDropdown);
+            $classesDropdown = DropdownField::create(
+                'ReferenceClass',
+                $self->fieldLabel('Type'),
+                $availableClasses
+            );
 
-        $fields->addFieldToTab('Root.Main', $classesDropdown);
-        $fields->addFieldToTab('Root.Main', $elementsDropdown);
+            $elementsDropdown = DependentDropdownField::create(
+                'ReferenceElementID',
+                $self->fieldLabel('ReferenceElementID'),
+                $availableElements
+            )->setDepends($classesDropdown);
 
+            $fields->addFieldToTab('Root.Main', $classesDropdown);
+            $fields->addFieldToTab('Root.Main', $elementsDropdown);
+        });
+
+        $fields = parent::getCMSFields();
         return $fields;
     }
 

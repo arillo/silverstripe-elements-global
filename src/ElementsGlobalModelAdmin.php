@@ -37,10 +37,10 @@ class ElementsGlobalModelAdmin extends ModelAdmin
 		}
 		
 		// Normalize models to have their model class in array key
-        foreach ($models as $k => $v) {
-			$models[$v] = array('title' => singleton($v)->i18n_plural_name());
-			unset($models[$k]);
-		}
+        	$models[$v] = [
+			'title' => singleton($v)->i18n_plural_name(),
+			'dataClass' => $v
+		];
 
 		return $models;
 	}

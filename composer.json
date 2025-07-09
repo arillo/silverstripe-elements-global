@@ -20,12 +20,14 @@
     }
   ],
   "extra": {
+    "expose": [
+      "client"
+    ],
     "installer-name": "elements-global"
   },
   "require": {
-    "arillo/silverstripe-elements": ">=2.x-dev",
-    "sheadawson/silverstripe-dependentdropdownfield": "dev-master",
-    "silverstripe/vendor-plugin": "^1"
+    "arillo/silverstripe-elements": "^3",
+    "sheadawson/silverstripe-dependentdropdownfield": "dev-master"
   },
   "autoload": {
     "psr-4": {

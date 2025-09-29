@@ -17,7 +17,7 @@ class ElementsGlobalModelAdmin extends ModelAdmin
 
 	private static $url_segment = 'elements-global';
 
-	private static $menu_icon = 'arillo/silverstripe-elements-global:client/images/ModelAdmin.png';
+	private static $menu_icon_class = 'font-icon-globe';
 
 	private static $menu_priority = 1.5;
 

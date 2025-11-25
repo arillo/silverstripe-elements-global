@@ -27,7 +27,7 @@
   },
   "require": {
     "arillo/silverstripe-elements": "^2.2",
-    "sheadawson/silverstripe-dependentdropdownfield": "dev-master",
+    "sheadawson/silverstripe-dependentdropdownfield": "^3.1.1",
     "silverstripe/vendor-plugin": "^1"
   },
   "autoload": {

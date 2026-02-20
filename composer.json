@@ -1,6 +1,5 @@
 {
   "name": "arillo/silverstripe-elements-global",
-  "version": "6.0",
   "description": "Global Elements",
   "type": "silverstripe-vendormodule",
   "homepage": "https://github.com/arillo/silverstripe-elements-global",
@@ -24,7 +23,7 @@
     "installer-name": "elements-global"
   },
   "require": {
-    "arillo/silverstripe-elements": "6.0",
+    "arillo/silverstripe-elements": "6.x-dev",
     "sheadawson/silverstripe-dependentdropdownfield": "^4.0",
     "silverstripe/vendor-plugin": "^3"
   },

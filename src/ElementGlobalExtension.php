@@ -1,9 +1,9 @@
 <?php
 namespace Arillo\ElementsGlobal;
 
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
-class ElementGlobalExtension extends DataExtension
+class ElementGlobalExtension extends Extension
 {
     private static $db = [
         'Global' => 'Boolean',
